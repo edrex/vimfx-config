@@ -12,9 +12,22 @@ vimfx.addCommand({
   args.vim.window.gURLBar.value = '% ';
 });
 
+vimfx.addCommand({
+  name: 'toggle_tree',
+  description: 'Toggle TreeStyleTab tab bar',
+  category: 'tabs'
+}, ({vim}) => {
+  let {gBrowser} = vim.window;
+  if (gBrowser.treeStyleTab.tabbarShown) {
+    gBrowser.treeStyleTab.hideTabbar();
+  } else {
+    gBrowser.treeStyleTab.showTabbar();
+  }
+});
 let map = (shortcuts, command, custom=false) => {
   vimfx.set(`${custom ? 'custom.' : ''}mode.normal.${command}`, shortcuts);
 };
 
 
 map('T',  'search_tabs', true);
+map('b',  'toggle_tree', true);
