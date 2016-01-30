@@ -8,7 +8,7 @@ You don't need to touch this file.
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
   <Description about="urn:mozilla:install-manifest">
     <em:name>VimFx Config</em:name>
-    <em:id>VimFx-config@vimfx.org</em:id>
+    <em:id>vimfx-config@eric.pdxhub.org</em:id>
     <em:version>1</em:version>
     <em:bootstrap>true</em:bootstrap>
     <em:multiprocessCompatible>true</em:multiprocessCompatible>
